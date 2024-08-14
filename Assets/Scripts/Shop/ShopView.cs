@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShopView : MonoBehaviour
+public class ShopView : MonoBehaviour, IItemPanel
 {
     private ShopController shopController;
     [SerializeField] private GameObject itemButtonPrefab;
@@ -33,7 +33,6 @@ public class ShopView : MonoBehaviour
 
     public void AddItemToPanel(ItemScriptableObject _itemData, int _quantity)
     {
-
         GameObject buttonObject = Instantiate(itemButtonPrefab, inventoryGrid);
         ItemController itemController = buttonObject.GetComponent<ItemController>();
 

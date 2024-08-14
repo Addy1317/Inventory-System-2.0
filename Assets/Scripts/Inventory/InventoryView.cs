@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventoryView : MonoBehaviour
+public class InventoryView : MonoBehaviour, IItemPanel
 {
     private InventoryController inventoryController;
     [SerializeField] private GameObject itemButtonPrefab;
